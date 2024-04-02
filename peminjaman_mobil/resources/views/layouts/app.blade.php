@@ -20,7 +20,7 @@
               <a class="nav-link" href="{{ url('mobil/form') }}">Peminjaman</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{ url('pengembalian') }}">Pengembalian</a>
+              <a class="nav-link" href="{{ url('mobil/pengembalian') }}">Pengembalian</a>
             </li>
             {{-- <li class="nav-item">
               <a class="nav-link disabled">Disabled</a>

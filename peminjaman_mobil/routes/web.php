@@ -37,6 +37,9 @@ Route::middleware(['auth:web'])->group(function () {
         Route::get('/form', [PeminjamanController::class, 'form']);
         Route::put('/check', [PeminjamanController::class, 'index']);
         Route::put('/pinjam/{id}', [PeminjamanController::class, 'store'])->name('pinjam');
+
+        Route::get('/pengembalian', [PeminjamanController::class, 'pengembalian']);
+        Route::put('/kembali', [PeminjamanController::class, 'kembali']);
         });
     // Route::get('/kategori', [KategoriController::class, 'index']);
 

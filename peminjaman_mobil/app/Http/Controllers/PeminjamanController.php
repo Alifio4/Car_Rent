@@ -66,7 +66,7 @@ class PeminjamanController extends Controller
             $item->tanggal_selesai   = Carbon::parse($request->tgl_kembali);
             $days = $item->tanggal_mulai->diffInDays($item->tanggal_selesai);
             $item->total_biaya = $days* $car->tarif_harian;
-            $item->status = "Sedang dipinjam";
+            $item->status = "Dipinjam";
             // dd ($item->total_biaya);
             $item->save();
 
@@ -83,9 +83,12 @@ class PeminjamanController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(peminjaman $peminjaman)
+    public function pengembalian(peminjaman $peminjaman)
     {
-        //
+        $data["mobil"] = peminjaman::with('dipinjam')->where('id_user', Auth::id())->get(); 
+        
+ 
+    return view("pengembalian.index",$data);
     }
 
     /**
