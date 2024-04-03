@@ -2,7 +2,7 @@
 
 @auth
 @section('content')
-<div class="card"> <h1> Form pengembalian Mobil </h1>
+<div class="card"> <h1 style='text-align: center'>  Form pengembalian Mobil </h1>
   <div class="card-body">
 <div id="form" style="margin-top: 10px">
   <form action="{{ url('mobil/kembali') }}" method="post" enctype="multipart/form-data">
@@ -29,10 +29,10 @@
 <div class="card">
     <div class="card-body">
         <form action="/search" method="GET">
-            <input type="text" name="search" placeholder="Cari merk/model mobil" value="{{ old('search') }}">
-            <input type="submit" value="search">
+            {{-- <input type="text" name="search" placeholder="Cari merk/model mobil" value="{{ old('search') }}">
+            <input type="submit" value="search"> --}}
       <table class="table" >
-        <thead>
+        <thead> <thead> <h1 style='text-align: center'>Riwayat peminjaman mobil</h1> <br>
           <tr>
             <th scope="col">No</th>
             <th scope="col">Merk</th>
@@ -62,9 +62,10 @@
         </tbody>
         
       </table>
-      <td><a class="btn btn-primary" href="mobil/create" role="button">Tambahkan Mobil</a></td> 
+      
     </div>
   </div> 
+
   
 @endauth
 @guest

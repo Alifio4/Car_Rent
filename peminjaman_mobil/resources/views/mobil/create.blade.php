@@ -1,5 +1,6 @@
 @extends('layouts.app')
 
+@auth
 @section('content')
 <div id="form" style="margin-top: 10px">
     <form action="{{ url('mobil/store') }}" method="post" enctype="multipart/form-data">
@@ -42,4 +43,9 @@
     </form>
 </div>
 @endsection
+
+@endauth
+@guest
+<h1 style="text-align: center;">Harap Login Terlebih Dahulu!</h1>
+@endguest
 

@@ -43,7 +43,6 @@ class MobilController extends Controller
             $item->model = $request->model;
             $item->no_plat = $request->no_plat;
             $item->tarif_harian = $request->tarif_harian;
-            $item->ketersediaan = "tersedia";
             $item->save();
         
     

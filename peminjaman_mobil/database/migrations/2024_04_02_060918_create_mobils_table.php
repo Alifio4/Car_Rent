@@ -17,9 +17,6 @@ return new class extends Migration
             $table->string('model');
             $table->text('no_plat');
             $table->integer('tarif_harian');
-            $table->string('ketersediaan');
-            $table->date('tanggal_mulai')->nullable();
-            $table->date('tanggal_selesai')->nullable();
             $table->timestamps();
         });
     }

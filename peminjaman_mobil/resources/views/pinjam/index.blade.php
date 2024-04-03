@@ -10,7 +10,7 @@
             <input type="text" name="search" placeholder="Cari merk/model mobil" value="{{ old('search') }}">
             <input type="submit" value="search"> --}}
       <table class="table" >
-        <thead> <h1> Mobil yang tersedia</h1>
+        <thead> <h1 style='text-align: center'> Mobil yang tersedia</h1>
           <tr>
             <th scope="col" id="myMenu">Merk</th>
             <th scope="col">Model</th>
@@ -32,9 +32,8 @@
                 <div class="row">
                   
                   <div class="col">
-                    <form action="{{ route('mobil.pinjam', $item->id) }}" method="POST">
+                    <form action="{{ route('pinjam', $item->id) }}" method="post">
                       @csrf
-                      @method('PUT')
                       {{-- @foreach ($tanggal as $no => $tgl) --}}
                       <input type="hidden" value="{{$tgl_pinjam}}" name="tgl_pinjam">
                       <input type="hidden" value="{{$tgl_kembali}}" name="tgl_kembali">
@@ -54,7 +53,19 @@
       </table>
     </div>
   </div> 
-  
+  @if(session()->has('message'))
+    <div class="alert alert-success">
+        {{ session()->get('message') }}
+    </div>
+@endif
+@if(Session::has('message'))
+    <div class="alert alert-info">
+        {{ Session::get('message') }}
+    </div>
+@endif
+@if(!empty($message))
+  <div class="alert alert-danger"> {{ $message }}</div>
+@endif
 @endauth
 @guest
 <h1 style="text-align: center;">Harap Login Terlebih Dahulu!</h1>

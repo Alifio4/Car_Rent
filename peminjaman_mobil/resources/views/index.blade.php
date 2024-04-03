@@ -5,8 +5,8 @@
 <div class="card">
     <div class="card-body">
         <form action="/search" method="GET">
-            <input type="text" name="search" placeholder="Cari merk/model mobil" value="{{ old('search') }}">
-            <input type="submit" value="search">
+            {{-- <input type="text" name="search" placeholder="Cari merk/model mobil" value="{{ old('search') }}">
+            <input type="submit" value="search"> --}}
       <table class="table" >
         <thead>
           <tr>

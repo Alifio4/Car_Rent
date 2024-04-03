@@ -2,7 +2,7 @@
 
 @auth
 @section('content')
-<div class="card"> <h1> Form Peminjaman Mobil </h1>
+<div class="card"> <h1 style='text-align: center'> Form Peminjaman Mobil </h1>
     <div class="card-body">
 <div id="form" style="margin-top: 10px">
     <form action="{{ url('mobil/check') }}" method="post" enctype="multipart/form-data">
